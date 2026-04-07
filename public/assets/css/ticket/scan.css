@@ -1,0 +1,158 @@
+/* PAGE */
+a.back {
+  margin-top: 6rem;
+  margin-bottom: 3rem;
+}
+.qr-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+}
+
+/* CARD */
+.qr-card {
+  background: #ffffff;
+  width: 80%;
+  max-width: 360px;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
+/* TITLE */
+.qr-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.qr-subtitle {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 16px;
+}
+
+/* SCANNER (FIX UTAMA) */
+.qr-scanner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1; /* 🔥 KUNCI KOTAK */
+  border-radius: 14px;
+  overflow: hidden;
+  background: #000;
+}
+
+/* READER */
+#reader {
+  position: absolute;
+  inset: 0;
+}
+
+/* VIDEO FIX MOBILE */
+#reader video {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover; /* 🔥 STANDAR APP QR */
+}
+
+/* OVERLAY */
+.qr-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* CORNERS */
+.corner {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 3px solid #00e676;
+}
+
+.corner.tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
+.corner.tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
+.corner.bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
+.corner.br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+}
+
+/* SCAN LINE */
+.scan-line {
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00e676, transparent);
+  animation: scan 2s linear infinite;
+}
+
+/* RESULT */
+#scan-result {
+  margin-top: 16px;
+  padding: 12px;
+  width: 100%;
+  max-width: 360px;
+  border-radius: 10px;
+  font-weight: 600;
+  text-align: center;
+  white-space: pre-wrap;
+  display: none;
+}
+
+/* STATUS */
+#scan-result.success {
+  background: #e8fff2;
+  color: #0a7a3c;
+}
+#scan-result.used {
+  background: #fff4e5;
+  color: #b56b00;
+}
+#scan-result.invalid {
+  background: #ffecec;
+  color: #b00020;
+}
+
+/* ANIMATION */
+@keyframes scan {
+  0% {
+    top: 10px;
+  }
+  100% {
+    top: calc(100% - 10px);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .qr-page {
+    padding: 0;
+  }
+
+  .qr-card {
+    border-radius: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+}

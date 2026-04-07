@@ -1,0 +1,35 @@
+#committee {
+  margin-top: 3rem;
+}
+#committee .container {
+  margin-top: 3rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+#committee .add-committee {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+}
+
+/** mobile view */
+@media screen and (max-width: 576px) {
+  #committee .container {
+    width: 90%;
+  }
+  th {
+    font-size: 0.6rem;
+  }
+  td {
+    font-size: 0.6rem;
+  }
+  #committee .add-committee {
+    font-size: 0.8rem;
+  }
+  #committee .kick-btn {
+    font-size: 0.6rem;
+    padding: 0.2rem 0.4em;
+  }
+}

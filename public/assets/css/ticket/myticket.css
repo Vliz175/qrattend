@@ -1,0 +1,121 @@
+.main {
+  min-height: 100vh;
+  padding-top: 5rem;
+}
+
+#form-pencarian #search {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#form-pencarian .btn {
+  background-color: #e3f9ff;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+#form-pencarian .btn:hover {
+  background-color: #96c9db;
+  color: white;
+}
+
+/** display */
+#display-event {
+  min-height: auto;
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  gap: 4%;
+}
+
+/** card */
+#display-event .wrap-card {
+  width: 48%;
+  height: 200px;
+  margin-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  font-size: smaller;
+  box-sizing: border-box;
+}
+
+/** card-image */
+#display-event .wrap-card .img {
+  width: 60%;
+  height: 130%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  position: absolute;
+  left: -15%;
+  top: -15%;
+  aspect-ratio: 1/1;
+}
+#display-event .wrap-card .img img {
+  width: 40%;
+}
+
+/** card detail */
+#display-event .wrap-card .text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  margin-left: 40%;
+  border-left: 4px dashed black;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+#display-event .wrap-card .text .bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-top: 0.5px solid black;
+  align-items: center;
+  padding-top: 1rem;
+}
+#display-event .wrap-card .text .bottom .days-left {
+  border: 1px solid black;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+/** kode QR */
+.modal-body {
+  display: flex;
+  flex-direction: column;
+}
+.modal-body .top {
+  height: 10%;
+}
+
+/** area view mobile */
+@media screen and (max-width: 576px) {
+  #display-event .wrap-card {
+    width: 100%;
+    size-adjust: 10%;
+    margin-bottom: 2rem;
+    height: 150px;
+    font-size: x-small;
+  }
+  /** text */
+  #display-event .wrap-card .text .top .text-event p {
+    font-size: 0.7rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 0.3rem;
+  }
+}

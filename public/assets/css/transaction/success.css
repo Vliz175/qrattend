@@ -1,0 +1,20 @@
+.success-box {
+  max-width: 400px;
+  margin: 8rem auto;
+  padding: 20px 25px;
+  border-radius: 10px;
+  background-color: #e9f9ee;
+  border: 1px solid #2ecc71;
+  color: #2e7d32;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+
+.success-box h2 {
+  margin-bottom: 10px;
+}
+
+.success-box p {
+  margin: 0;
+  font-size: 14px;
+}

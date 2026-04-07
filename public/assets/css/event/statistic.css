@@ -1,0 +1,90 @@
+#statistic {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+/* CONTAINER */
+#statistic .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* TITLE */
+#statistic header h1 {
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* SQUARE WRAPPER → GRID */
+#statistic .square-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  width: 100%;
+  margin: 3rem 0;
+}
+
+/* CARD */
+#statistic .square {
+  background-color: #fff;
+  min-height: 140px;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* TEXT */
+#statistic .square .number {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+#statistic .square .title {
+  font-size: 14px;
+  color: #666;
+}
+
+/* BUTTON WRAPPER */
+#statistic .button-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+/* BUTTON */
+#statistic .button-wrapper .btn {
+  width: 100%;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  #statistic .square-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #statistic .button-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  #statistic .square-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  #statistic .button-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
